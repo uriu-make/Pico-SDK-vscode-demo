@@ -1,0 +1,33 @@
+{
+    "cmake.configureOnOpen": true,
+    "cmake.statusbar.advanced": {
+        "debug": {
+            "visibility": "hidden"
+        },
+        "launch": {
+            "visibility": "hidden"
+        },
+        "build": {
+            "visibility": "hidden"
+        },
+        "buildTarget": {
+            "visibility": "hidden"
+        },
+    },
+    "files.associations": {
+        "stdlib.h": "c",
+        "stdio_usb.h": "c",
+        "stdio.h": "c",
+        "picoboot.h": "c",
+        "bootrom.h": "c",
+        "pico.h": "c",
+        "config.h": "c",
+        "interp.h": "c",
+        "pio_i2c.h": "c",
+        "blink.pio.h": "c"
+    },
+    "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "cmake.buildTask": true
+}
