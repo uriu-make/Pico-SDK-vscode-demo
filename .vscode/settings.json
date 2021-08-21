@@ -26,8 +26,5 @@
         "pio_i2c.h": "c",
         "blink.pio.h": "c"
     },
-    "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
-    "C_Cpp.intelliSenseEngine": "Tag Parser",
-    "C_Cpp.intelliSenseEngineFallback": "Enabled",
     "cmake.buildTask": true
 }
