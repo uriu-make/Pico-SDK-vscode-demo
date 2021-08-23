@@ -11,7 +11,7 @@
             "type": "cortex-debug",
             "servertype": "jlink",
             "gdbPath": "gdb-multiarch",
-            "serverpath": "/mnt/c/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
+            "serverpath": "JLinkGDBServerCL.exe",
             "device": "RP2040_M0_0",
             "executable": "${fileDirname}/build/${fileBasenameNoExtension}.elf",
             "interface": "swd",
@@ -22,7 +22,7 @@
             ],
             "runToEntryPoint": "main",
             "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
-            "preLaunchTask": "build"
+            "preLaunchTask": "debug"
         }
     ]
 }

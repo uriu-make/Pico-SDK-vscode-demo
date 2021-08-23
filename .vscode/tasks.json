@@ -4,29 +4,13 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "download",
+            "label": "upload",
             "type": "shell",
-            "command": "cmake",
-            "args": [
-                "-DCMAKE_BUILD_TYPE=Debug",
-                "..",
-                "&&",
-                "make",
-                "-j4",
-                "&&",
-                "/mnt/c/Program Files/SEGGER/JLink/JLink.exe",
-                "-if",
-                "swd",
-                "-device",
-                "RP2040_M0_0",
-                "-speed",
-                "4000",
-                "-CommanderScript",
-                "../pico-download.jlink"
+            "dependsOn": [
+                "release",
+                "jlink"
             ],
-            "options": {
-                "cwd": "${fileDirname}/build"
-            },
+            "dependsOrder": "sequence",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
@@ -34,7 +18,7 @@
             }
         },
         {
-            "label": "build",
+            "label": "debug",
             "type": "shell",
             "command": "cmake",
             "args": [
@@ -52,6 +36,44 @@
                 "kind": "test",
                 "isDefault": true
             }
+        },
+        {
+            "label": "release",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "..",
+                "&&",
+                "make",
+                "-j4"
+            ],
+            "options": {
+                "cwd": "${fileDirname}/build"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "jlink",
+            "type": "shell",
+            "command": "/mnt/c/tools/JLink/JLink.exe",
+            "args": [
+                "-if",
+                "swd",
+                "-device",
+                "RP2040_M0_0",
+                "-speed",
+                "4000",
+                "-CommanderScript",
+                "../pico-download.jlink"
+            ],
+            "options": {
+                "cwd": "${fileDirname}/build"
+            },
+            "problemMatcher": []
         },
         {
             "label": "clean up",
