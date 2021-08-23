@@ -1,4 +1,5 @@
-Raspberry Pi PicoをWSL+VSCodeで開発する環境のサンプル\
+Raspberry Pi PicoをWSL1+VSCodeで開発する環境のサンプル\
+WSL2での動作はサポートされていません。\
 Picoへの書き込みとデバッグはWindows側のJ-Linkを操作することで行っています。\
 Pico-SDKへのパスは環境変数で設定しています。\
 .vscode/launch.jsonのserverpathとtasks.json内のJLink.exeのパスはそれぞれの環境に合わせて変更してください。\
